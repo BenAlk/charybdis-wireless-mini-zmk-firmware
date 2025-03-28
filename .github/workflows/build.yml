@@ -3,16 +3,16 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 */2 *'  # run every two months to keep artifacts from expiring
+    - cron: '0 0 1 */2 *' # run every two months to keep artifacts from expiring
 jobs:
   store-keymap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Rename keymap file
+      - name: Prepare keymap
         run: |
-          # Ensure we're using only the Colemak keymap
+          # Just use the keymap directly without conversion
           cp ${{ github.workspace }}/config/charybdis.keymap ${{ github.workspace }}/config/colemak_dh.keymap
       - uses: actions/upload-artifact@v4
         with:

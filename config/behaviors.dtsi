@@ -74,7 +74,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Adjust this timing as needed
-            bindings = <&kp F12>, <&kp ESC>; // Single tap = F12, double tap = ESC
+            bindings = <&kp ESC>, <&kp F12>; // Single tap = ESC double tap = F12,
         };
     };
 };

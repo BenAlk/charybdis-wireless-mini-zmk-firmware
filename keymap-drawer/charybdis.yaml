@@ -38,8 +38,8 @@ layers:
   - ~/
   - CLIP HIST
   - SCRL SLOW
-  - L CLK
   - '&td_space'
+  - L CLK
   - {t: RETURN, h: SCROLL}
   - '&td_bs'
   NUM:
