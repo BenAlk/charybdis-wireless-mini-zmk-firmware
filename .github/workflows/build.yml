@@ -1,37 +1,28 @@
 name: ZMK Firmware
-
 on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 */2 *' # run every two months to keep artifacts from expiring
-
+    - cron: '0 0 1 */2 *'  # run every two months to keep artifacts from expiring
 jobs:
-  convert-and-store-keymap:
+  store-keymap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-      - run: python scripts/convert_keymap.py -c q2c --in-path "$GITHUB_WORKSPACE/config/charybdis.keymap"
-
+      - name: Rename keymap file
+        run: |
+          # Ensure we're using only the Colemak keymap
+          cp ${{ github.workspace }}/config/charybdis.keymap ${{ github.workspace }}/config/colemak_dh.keymap
       - uses: actions/upload-artifact@v4
         with:
           name: keymap_files
           path: ${{ github.workspace }}/config/*.keymap
-
   build:
-    needs: convert-and-store-keymap
+    needs: store-keymap
     uses: ./.github/workflows/user_config_build.yaml
-    # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
   keymap_images:
     needs: build
     permissions:
       contents: write
     uses: ./.github/workflows/draw_keymaps.yaml
-    # credit to https://github.com/caksoylar/keymap-drawer
