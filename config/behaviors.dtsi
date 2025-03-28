@@ -70,7 +70,7 @@
             bindings = <&kp FSLH>, <&home_macro>;
         };
 
-        td_esc: F12_or_ESC {
+        td_esc_f12: F12_or_ESC {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           bindings = <&kp F12>, <&kp ESC>;
