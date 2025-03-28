@@ -173,7 +173,7 @@ layers:
   - OUT USB
   - OUT BLE
   - BT CLR
-  - '&zmk_studio'
+  - ZMK Studio
   - '&studio_lock'
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
