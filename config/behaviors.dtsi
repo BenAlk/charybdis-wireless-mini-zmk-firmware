@@ -69,7 +69,6 @@
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&home_macro>;
         };
-<<<<<<< HEAD
 
         td_f12_esc: td_f12_esc {
             compatible = "zmk,behavior-tap-dance";
@@ -77,7 +76,5 @@
             tapping-term-ms = <200>; // Adjust this timing as needed
             bindings = <&kp F12>, <&kp ESC>; // Single tap = F12, double tap = ESC
         };
-=======
->>>>>>> 60c05f7e2d2a1ff25b12b4e7968669b931b7f029
     };
 };
