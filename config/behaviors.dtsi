@@ -42,22 +42,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <85>;
-            bindings = <&lt 2 SPACE>, <&kp SPACE>; // hold, tap, double_tap
+            bindings = <&lt 1 SPACE>, <&kp SPACE>; // hold, tap, double_tap
         };
 
         td_bs: td_bs {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <85>;
-            bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>; // hold, tap, double_tap
-        };
-
-        httl: ht_two_layers {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&to>;
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <125>;
+            bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>; // hold, tap, double_tap
         };
 
         td_layers: td_layer_swap {
@@ -66,41 +58,11 @@
             bindings = <&to 0>, <&to 5>, <&to 4>; // tap, double_tap, tripple_tap
         };
 
-        td_clk_scrl: td_click_or_scroll {
+        td_bore: BASE_or_SYSTEM {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&mo 9>;  // tap/hold, double_tap
+            bindings = <&mo 4>, <&to 0>;
         };
 
-        td_bore: BASE_or_EXTRA {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 6>, <&to 0>;
-        };
-
-        td_grave: DoubleTap_Grave {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&grave_macro>;
-        };
-
-        td_hyphen: DoubleTap_Hyphen {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&minus_macro>;
-        };
-
-        td_equals: DoubleTap_Equals {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&equals_macro>;
-        };
-
-        td_home: DoubleTap_Home {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&home_macro>;
-        };
     };
 };

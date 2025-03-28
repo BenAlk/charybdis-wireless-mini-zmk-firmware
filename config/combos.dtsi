@@ -18,43 +18,16 @@
             key-positions = <16 37>;
         };
 
-        RightParen {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <20 21>;
-            layers = <3>;
-        };
-
-        RightBracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <21 22>;
-            layers = <3>;
-        };
-
-        RightBrace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <8 9>;
-            layers = <3>;
-        };
-
-        RightGreaterThan {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <32 33>;
-            layers = <3>;
-        };
-
         BASE_or_EXTRAS {
             bindings = <&td_bore>;
             key-positions = <38 39>;
         };
 
-        // GameLayer {
-        //     bindings = <&tog 4>;
-        //     key-positions = <8 9>;
-        // };
+        combo_a_o_layer3 {
+            bindings = <&sl 3>;
+            key-positions = <13 22>;
+            layers = <0>
+        };
 
-        // PhotoLayer {
-        //     bindings = <&tog 5>;
-        //     key-positions = <2 3>;
-        // };
     };
 };

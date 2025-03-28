@@ -1,0 +1,384 @@
+/ {
+    macros {
+        // JavaScript Operators
+        arrow_fn: arrow_fn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp EQUAL &kp GREATER_THAN &kp SPACE>;
+        };
+
+        ternary: ternary {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp QUESTION &kp SPACE &kp COLON &kp SPACE>;
+        };
+
+        triple_equals: triple_equals {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp EQUAL &kp EQUAL &kp EQUAL>;
+        };
+
+        not_equals: not_equals {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp EXCL &kp EQUAL &kp EQUAL>;
+        };
+
+        log_and: log_and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp AMPS &kp AMPS>;
+        };
+
+        log_or: log_or {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp PIPE &kp PIPE>;
+        };
+
+        jsx_tag: jsx_tag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp LT
+                &kp GREATER_THAN
+                &kp LEFT_ARROW
+                &kp LEFT_ARROW
+                &kp SLASH
+                &kp GREATER_THAN>;
+        };
+
+        // React Hooks
+        use_state: use_state {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LBKT
+                &kp S &kp T &kp A &kp T &kp E &kp COMMA &kp SPACE
+                &kp S &kp E &kp T &kp S &kp T &kp A &kp T &kp E
+                &kp RBKT &kp SPACE &kp EQUAL &kp SPACE
+                &kp U &kp S &kp E &kp S &kp T &kp A &kp T &kp E &kp LPAR &kp RPAR &kp SEMI>;
+        };
+
+        use_effect: use_effect {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp U &kp S &kp E &kp E &kp F &kp F &kp E &kp C &kp T &kp LPAR
+                &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE
+                &kp LBRC &kp ENTER &kp ENTER &kp RBRC &kp COMMA &kp SPACE
+                &kp LBKT &kp RBKT &kp RPAR &kp SEMI &kp UP &kp UP>;
+        };
+
+        use_ref: use_ref {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE
+                &kp R &kp E &kp F &kp SPACE &kp EQUAL &kp SPACE
+                &kp U &kp S &kp E &kp R &kp E &kp F &kp LPAR &kp N &kp U &kp L &kp L &kp RPAR &kp SEMI>;
+        };
+
+        use_memo: use_memo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE
+                &kp M &kp E &kp M &kp O &kp I &kp Z &kp E &kp D &kp SPACE &kp EQUAL &kp SPACE
+                &kp U &kp S &kp E &kp M &kp E &kp M &kp O &kp LPAR &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE
+                &kp LBRC &kp ENTER &kp ENTER &kp RBRC &kp COMMA &kp SPACE
+                &kp LBKT &kp RBKT &kp RPAR &kp SEMI>;
+        };
+
+        use_ctx: use_ctx {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE
+                &kp V &kp A &kp L &kp U &kp E &kp SPACE &kp EQUAL &kp SPACE
+                &kp U &kp S &kp E &kp C &kp O &kp N &kp T &kp E &kp X &kp T &kp LPAR
+                &kp C &kp O &kp N &kp T &kp E &kp X &kp T &kp RPAR &kp SEMI>;
+        };
+
+        // React Components
+        react_fc: react_fc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE
+                &kp C &kp O &kp M &kp P &kp O &kp N &kp E &kp N &kp T &kp SPACE &kp EQUAL &kp SPACE
+                &kp LPAR &kp LBRC &kp SPACE &kp P &kp R &kp O &kp P &kp S &kp SPACE &kp RBRC &kp RPAR &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE
+                &kp LBRC &kp ENTER &kp ENTER &kp SPACE &kp SPACE &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE
+                &kp LPAR &kp ENTER &kp SPACE &kp SPACE &kp SPACE &kp SPACE
+                &kp LT &kp GT &kp LT &kp SLASH &kp GT &kp ENTER
+                &kp SPACE &kp SPACE &kp RPAR &kp SEMI &kp ENTER
+                &kp RBRC &kp SEMI>;
+        };
+
+        jsx_fragment: jsx_fragment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp LT &kp GT &kp ENTER
+                &kp SPACE &kp SPACE
+                &kp LT &kp SLASH &kp GT>;
+        };
+
+        // JS Utilities
+        console_log: console_log {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp O &kp L &kp E &kp DOT
+                &kp L &kp O &kp G &kp LPAR &kp RPAR &kp SEMI>;
+        };
+
+        import_react: import_react {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE
+                &kp LBRC &kp SPACE &kp U &kp S &kp E &kp S &kp T &kp A &kp T &kp E &kp COMMA &kp SPACE
+                &kp U &kp S &kp E &kp E &kp F &kp F &kp E &kp C &kp T &kp SPACE &kp RBRC &kp SPACE
+                &kp F &kp R &kp O &kp M &kp SPACE
+                &kp SQT &kp R &kp E &kp A &kp C &kp T &kp SQT &kp SEMI>;
+        };
+
+        export_default: export_default {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp E &kp X &kp P &kp O &kp R &kp T &kp SPACE
+                &kp D &kp E &kp F &kp A &kp U &kp L &kp T &kp SPACE>;
+        };
+
+        export_named: export_named {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp E &kp X &kp P &kp O &kp R &kp T &kp SPACE
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE>;
+        };
+
+        state_update: state_update {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp S &kp E &kp T &kp S &kp T &kp A &kp T &kp E &kp LPAR
+                &kp P &kp R &kp E &kp V &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE
+                &kp LPAR &kp RPAR &kp RPAR &kp SEMI>;
+        };
+
+        effect_deps: effect_deps {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp LBKT &kp RBKT>;
+        };
+
+        ref_current: ref_current {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp R &kp E &kp F &kp DOT &kp C &kp U &kp R &kp R &kp E &kp N &kp T>;
+        };
+
+        props_spread: props_spread {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp LBRC &kp DOT &kp DOT &kp DOT &kp P &kp R &kp O &kp P &kp S &kp RBRC>;
+        };
+
+        try_catch: try_catch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp T &kp R &kp Y &kp SPACE &kp LBRC &kp ENTER
+                &kp SPACE &kp SPACE
+                &kp ENTER &kp RBRC &kp SPACE &kp C &kp A &kp T &kp C &kp H &kp SPACE
+                &kp LPAR &kp E &kp R &kp R &kp O &kp R &kp RPAR &kp SPACE &kp LBRC &kp ENTER
+                &kp SPACE &kp SPACE
+                &kp ENTER &kp RBRC>;
+        };
+
+        async_await: async_await {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp A &kp S &kp Y &kp N &kp C &kp SPACE
+                &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE
+                &kp LBRC &kp ENTER
+                &kp SPACE &kp SPACE &kp A &kp W &kp A &kp I &kp T &kp SPACE
+                &kp ENTER &kp RBRC>;
+        };
+
+        cond_render: cond_render {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp LBRC &kp SPACE
+                &kp RBRC &kp SPACE &kp AMPS &kp AMPS &kp SPACE &kp LPAR &kp RPAR>;
+        };
+
+        map_array: map_array {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp DOT &kp M &kp A &kp P &kp LPAR &kp LPAR &kp I &kp T &kp E &kp M &kp COMMA &kp SPACE &kp I &kp N &kp D &kp E &kp X &kp RPAR &kp SPACE
+                &kp EQUAL &kp GREATER_THAN &kp SPACE &kp LPAR
+                &kp ENTER
+                &kp SPACE &kp SPACE
+                &kp RPAR &kp RPAR>;
+        };
+
+        destructure: destructure {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp N &kp S &kp T &kp SPACE &kp LBRC &kp SPACE &kp RBRC &kp SPACE &kp EQUAL &kp SPACE>;
+        };
+
+        prop_types: prop_types {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp C &kp O &kp M &kp P &kp O &kp N &kp E &kp N &kp T &kp DOT &kp P &kp R &kp O &kp P &kp T &kp Y &kp P &kp E &kp S &kp SPACE
+                &kp EQUAL &kp SPACE &kp LBRC &kp ENTER
+                &kp SPACE &kp SPACE
+                &kp ENTER &kp RBRC &kp SEMI>;
+        };
+
+        test_render: test_render {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp R &kp E &kp N &kp D &kp E &kp R &kp LPAR &kp LT &kp C &kp O &kp M &kp P &kp O &kp N &kp E &kp N &kp T &kp SPACE &kp SLASH &kp GT &kp RPAR>;
+        };
+
+        test_expect: test_expect {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp E &kp X &kp P &kp E &kp C &kp T &kp LPAR &kp RPAR>;
+        };
+
+        test_mock: test_mock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp J &kp E &kp S &kp T &kp DOT &kp M &kp O &kp C &kp K &kp LPAR &kp RPAR>;
+        };
+
+        npm_install: npm_install {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp N &kp P &kp M &kp SPACE &kp I &kp N &kp S &kp T &kp A &kp L &kp L &kp SPACE>;
+        };
+
+        git_commit: git_commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DQT &kp DQT &kp LEFT>;
+        };
+
+        git_push: git_push {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp S &kp H>;
+        };
+
+        git_pull: git_pull {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp G &kp I &kp T &kp SPACE &kp P &kp U &kp L &kp L>;
+        };
+
+        json_parse: json_parse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp J &kp S &kp O &kp N &kp DOT &kp P &kp A &kp R &kp S &kp E &kp LPAR &kp RPAR>;
+        };
+
+        json_string: json_string {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp J &kp S &kp O &kp N &kp DOT &kp S &kp T &kp R &kp I &kp N &kp G &kp I &kp F &kp Y &kp LPAR &kp RPAR>;
+        };
+
+        debugger: debugger {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap
+                &kp D &kp E &kp B &kp U &kp G &kp G &kp E &kp R &kp SEMI>;
+        };
+
+        // System utilities for the SYSTEM layer
+        app_switch1: app_switch1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCMD &macro_tap &kp N1 &macro_release &kp LCMD>;
+        };
+
+        app_switch2: app_switch2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCMD &macro_tap &kp N2 &macro_release &kp LCMD>;
+        };
+
+        app_switch3: app_switch3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCMD &macro_tap &kp N3 &macro_release &kp LCMD>;
+        };
+
+        zmk_studio: zmk_studio {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LCMD &kp K &kp S>;
+        };
+
+        studio_lock: studio_lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LCMD &kp K &kp L>;
+        };
+
+        tb_toggle: tb_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LCMD &kp K &kp T>;
+        };
+
+        tb_speed: tb_speed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LCMD &kp K &kp P>;
+        };
+
+        profile: profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LCMD &kp K &kp O>;
+        };
+
+        precision: precision {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &mo 8>;
+        };
+
+        acceleration: acceleration {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &tog 10>;
+        };
+    };
+};
