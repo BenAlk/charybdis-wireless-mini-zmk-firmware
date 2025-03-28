@@ -71,7 +71,7 @@
         };
 
         td_esc: F12_or_ESC {
-          compatible = "zmk,behaviour-tap-dance";
+          compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           bindings = <&kp F12>, <&kp ESC>;
         };
