@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - DEV TOOLS
+  - '&td_f12_esc'
   - Q
   - W
   - F
