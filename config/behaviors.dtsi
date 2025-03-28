@@ -35,11 +35,11 @@
         td_cursor: td_scroll_or_cursor {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&lt 7>, <&lt 6>; // hold, tap, double_tap
+            bindings = <&lt 9 ESC>, <&mo 8>; // hold, tap, double_tap
         };
 
         td_space: td_space {
-            compatible  = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <85>;
             bindings = <&lt 1 SPACE>, <&kp SPACE>; // hold, tap, double_tap
@@ -55,7 +55,7 @@
         td_layers: td_layer_swap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&to 4>; // tap, double_tap, triple_tap
+            bindings = <&to 0>, <&to 5>, <&to 4>; // tap, double_tap, tripple_tap
         };
 
         td_bore: BASE_or_SYSTEM {
@@ -68,12 +68,6 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&home_macro>;
-        };
-
-        td_esc_f12: F12_or_ESC {
-          compatible = "zmk,behavior-tap-dance";
-          #binding-cells = <0>;
-          bindings = <&kp F12>, <&kp ESC>;
         };
     };
 };
