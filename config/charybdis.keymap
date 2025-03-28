@@ -128,7 +128,7 @@
         SYSTEM {
             bindings = <
 &bootloader  &out OUT_USB  &out OUT_BLE  &bt BT_CLR  &zmk_studio   &studio_lock        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &to 0
-&sys_reset   &C_POWER      &tb_toggle    &tb_speed   &kp C_SLEEP   &kp C_PP            &kp C_PP       &kp C_PREV     &kp C_NEXT    &kp F9        &kp F10       &kp F11
+&sys_reset   &kp C_POWER      &tb_toggle    &tb_speed   &kp C_SLEEP   &kp C_PP            &kp C_PP       &kp C_PREV     &kp C_NEXT    &kp F9        &kp F10       &kp F11
 &profile     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_BRI_DN  &kp C_BRI_UP        &app_switch1   &app_switch2   &app_switch3  &kp F1        &KP_F5        &kp PSCRN
                                          &trans      &trans        &trans              &trans         &trans
             >;
