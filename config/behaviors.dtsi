@@ -75,6 +75,5 @@
           #binding-cells = <0>;
           bindings = <&kp F12>, <&kp ESC>;
         };
-        }
     };
 };
