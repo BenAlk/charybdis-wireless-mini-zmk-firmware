@@ -79,8 +79,8 @@
 // #define MOUSE   5
 // #define SLOW    6
 // #define SCROLL  7
-// #define EMPTY   8
-// #define EMPTY2  9
+// #define SPARE   8
+// #define SPARE2  9
 
     keymap {
         compatible = "zmk,keymap";
@@ -161,7 +161,7 @@
             >;
         };
 
-        EMPTY {
+        SPARE {
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
@@ -170,7 +170,7 @@
             >;
         };
 
-        EMPTY2 {
+        SPARE2 {
             bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
