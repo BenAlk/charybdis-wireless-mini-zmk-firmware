@@ -64,5 +64,10 @@
             bindings = <&mo 4>, <&to 0>;
         };
 
+        td_home: DoubleTap_Home {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&home_macro>;
+        };
     };
 };

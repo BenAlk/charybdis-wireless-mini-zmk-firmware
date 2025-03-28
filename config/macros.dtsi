@@ -162,5 +162,13 @@
                 ;
         };
 
+        home_macro: home_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp TILDE>
+                , <&macro_tap &kp FSLH>
+                ;
+        };
     };
 };
