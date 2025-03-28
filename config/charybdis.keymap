@@ -100,9 +100,9 @@
 
         NUM {
             bindings = <
-&kp ESC       &kp HOME  &kp UP    &kp END    &kp PG_UP    &none            &jsx_tag   &hm F7 N7  &hm F8 N8  &hm F9 N9  &kp MINUS     &EQUAL
-&kp TAB       &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp DEL          &arrow_fn  &hm F4 N4  &hm F5 N5  &hm F6 N6  &hm F11 LBKT  &RBKT
-&kp LC(GRAVE) &kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)    &kp LC(Y)        &ternary   &hm F1 N1  &hm F2 N2  &hm F3 N3  &hm F12 BSLH  &PIPE
+&kp ESC       &kp HOME  &kp UP    &kp END    &kp PG_UP    &none            &jsx_tag   &hm F7 N7  &hm F8 N8  &hm F9 N9  &kp MINUS     &kp EQUAL
+&kp TAB       &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp DEL          &arrow_fn  &hm F4 N4  &hm F5 N5  &hm F6 N6  &hm F11 LBKT  &kp RBKT
+&kp LC(GRAVE) &kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)    &kp LC(Y)        &ternary   &hm F1 N1  &hm F2 N2  &hm F3 N3  &hm F12 BSLH  &kp PIPE
                                   &trans     &trans       &trans           &kp N0     &trans
             >;
         };
