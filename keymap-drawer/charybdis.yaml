@@ -433,3 +433,6 @@ combos:
 - p: [13, 22]
   k: {t: REACT, h: sticky}
   l: [BASE]
+- p: [0, 11]
+  k: Gui+ Q
+  l: [BASE]

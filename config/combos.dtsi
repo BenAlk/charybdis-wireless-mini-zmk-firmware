@@ -30,7 +30,7 @@
         };
 
         combo_close {
-            bindings = <&td_quit>;
+            bindings = <&kp LG(Q)>;
             key-positions = <00 11>;
             layers = <0>;
         };
