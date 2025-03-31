@@ -170,5 +170,12 @@
                 , <&macro_tap &kp FSLH>
                 ;
         };
+
+        ctrl_gui: ctrl_gui {
+            label = "CTRL_GUI";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LGUI>;
+        };
     };
 };
