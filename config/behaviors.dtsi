@@ -76,5 +76,12 @@
             tapping-term-ms = <200>; // Adjust this timing as needed
             bindings = <&kp ESC>, <&kp F12>; // Single tap = ESC double tap = F12,
         };
+
+        td_search: td_search {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(F)>, <&c_ac_search>;
+        };
     };
 };
