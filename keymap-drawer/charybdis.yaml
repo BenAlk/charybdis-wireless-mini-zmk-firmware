@@ -39,8 +39,8 @@ layers:
   - CLIP HIST
   - SCRL SLOW
   - '&td_space'
-  - L CLK
   - {t: RETURN, h: SCROLL}
+  - L CLK
   - '&td_bs'
   NUM:
   - ESC
@@ -333,8 +333,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SPARE:
   - {t: ▽, type: trans}
