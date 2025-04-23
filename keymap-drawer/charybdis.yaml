@@ -424,9 +424,9 @@ combos:
 - p: [17, 18]
   k: CAPS WORD
   l: [BASE]
-- p: [28, 37]
+- p: [28, 39]
   k: Mid CLK
-- p: [16, 37]
+- p: [16, 39]
   k: R CLK
 - p: [38, 39]
   k: L_BASE L_EXTRA
