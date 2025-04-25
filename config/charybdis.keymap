@@ -100,9 +100,9 @@
 
         NUM {
             bindings = <
-&C_AC_BACK    &kp PG_UP &kp HOME  &kp UP     &kp END      &none            &trans   &hm F7 N7  &hm F8 N8  &hm F9 N9  &kp MINUS     &C_AC_ZOOM_IN
-&C_AC_FORWARD &kp PG_DN &kp LEFT  &kp DOWN   &kp RIGHT    &kp LGUI         &trans   &hm F4 N4  &hm F5 N5  &hm F6 N6  &hm F11 LBKT  &C_AC_ZOOM_OUT
-&C_AC_HOME    &kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)    &kp LC(Y)        &trans   &hm F1 N1  &hm F2 N2  &hm F3 N3  &hm F12 BSLH  &trans
+&kp C_AC_BACK    &kp PG_UP &kp HOME  &kp UP     &kp END      &none            &trans   &hm F7 N7  &hm F8 N8  &hm F9 N9  &kp MINUS     &kp C_AC_ZOOM_IN
+&kp C_AC_FORWARD &kp PG_DN &kp LEFT  &kp DOWN   &kp RIGHT    &kp LGUI         &trans   &hm F4 N4  &hm F5 N5  &hm F6 N6  &hm F11 LBKT  &kp C_AC_ZOOM_OUT
+&kp C_AC_HOME    &kp LC(Z) &kp LC(X) &kp LC(C)  &kp LC(V)    &kp LC(Y)        &trans   &hm F1 N1  &hm F2 N2  &hm F3 N3  &hm F12 BSLH  &trans
                                   &trans     &trans       &trans           &kp N0     &trans
             >;
         };
