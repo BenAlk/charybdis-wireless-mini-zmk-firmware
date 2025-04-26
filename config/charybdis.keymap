@@ -110,7 +110,7 @@
         SYM {
             bindings = <
 &kp GRAVE  &kp EXCL  &kp FSLH  &kp LBKT  &kp RBKT   &kp PLUS        &kp EQUAL  &kp LT     &kp GT    &kp BSLH  &kp HASH   &kp TILDE
-&kp CARET  &kp AT    &kp AMPS  &kp LPAR  &kp RPAR   &kp SQT         &kp DQT    &kp LBRC   &kp RBRC  &kp PIPE  &kp QMARK  &kp AST
+&kp CARET  &kp AT    &kp AMPS  &kp LPAR  &kp RPAR   &kp SQT         &kp DQT    &kp LBRC   &kp RBRC  &kp PIPE  &kp QMARK  &kp ASTRK
 &none      &none     &none     &kp PRCNT &kp COLON  &kp MINUS       &kp UNDER  &kp SEMI   &trans    &trans    &none      &none
                                &trans    &trans     &trans          &trans      &trans
             >;
