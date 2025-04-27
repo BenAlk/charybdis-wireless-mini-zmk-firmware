@@ -177,5 +177,11 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL &kp LGUI>;
         };
+
+        pound_sign: pound_sign {
+            label = "£";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LSHFT) &kp U &kp N2 &kp N0 &kp N0 &kp A &kp N3 &kp SPACE>;
     };
 };
